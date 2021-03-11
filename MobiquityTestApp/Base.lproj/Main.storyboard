@@ -39,8 +39,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-Cu-wpA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-dZ-m4d">
-                                        <rect key="frame" x="153" y="18.5" width="108.5" height="23.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-dZ-m4d">
+                                        <rect key="frame" x="183" y="18.5" width="48.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -101,8 +101,43 @@
                                     <constraint firstItem="EGC-8R-Z3g" firstAttribute="leading" secondItem="HIQ-Cu-wpA" secondAttribute="leading" id="u74-uy-Six"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-C8-iiY">
+                                <rect key="frame" x="0.0" y="114" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-Eb-DRT">
+                                        <rect key="frame" x="10" y="5" width="354" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="I9q-zo-Dlh" id="19g-sP-VRq"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-fd-Ssb">
+                                        <rect key="frame" x="364" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="esH-3d-MKR"/>
+                                        </constraints>
+                                        <state key="normal" image="search_icon"/>
+                                        <connections>
+                                            <action selector="mapButtonAction:" destination="I9q-zo-Dlh" eventType="touchUpInside" id="LNa-AW-TmD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.033778809010000001" green="0.54098916050000001" blue="0.60638666149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hbZ-fd-Ssb" firstAttribute="top" secondItem="Tsx-C8-iiY" secondAttribute="top" id="0C8-sz-ZhV"/>
+                                    <constraint firstItem="Bsx-Eb-DRT" firstAttribute="leading" secondItem="Tsx-C8-iiY" secondAttribute="leading" constant="10" id="0gs-L3-kzl"/>
+                                    <constraint firstAttribute="trailing" secondItem="hbZ-fd-Ssb" secondAttribute="trailing" id="DPN-Me-7a0"/>
+                                    <constraint firstAttribute="height" constant="50" id="OAh-R0-gZd"/>
+                                    <constraint firstItem="Bsx-Eb-DRT" firstAttribute="top" secondItem="Tsx-C8-iiY" secondAttribute="top" constant="5" id="PTP-Dj-Sl1"/>
+                                    <constraint firstItem="hbZ-fd-Ssb" firstAttribute="leading" secondItem="Bsx-Eb-DRT" secondAttribute="trailing" id="TTe-od-yaI"/>
+                                    <constraint firstAttribute="bottom" secondItem="hbZ-fd-Ssb" secondAttribute="bottom" id="fIx-35-1UT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bsx-Eb-DRT" secondAttribute="bottom" constant="5" id="hr6-8s-OUx"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n7w-rO-UNR">
-                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="722"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -225,13 +260,16 @@
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="trailing" secondItem="LsR-3X-upa" secondAttribute="trailing" id="NcH-Q3-rLc"/>
                             <constraint firstAttribute="bottom" secondItem="i93-xn-yCz" secondAttribute="bottom" id="QWo-dj-tDd"/>
                             <constraint firstAttribute="bottom" secondItem="n7w-rO-UNR" secondAttribute="bottom" id="U4L-Be-lAc"/>
-                            <constraint firstItem="n7w-rO-UNR" firstAttribute="top" secondItem="HIQ-Cu-wpA" secondAttribute="bottom" constant="20" id="agw-kp-9Mc"/>
+                            <constraint firstItem="Tsx-C8-iiY" firstAttribute="top" secondItem="HIQ-Cu-wpA" secondAttribute="bottom" constant="10" id="WJO-SU-LF3"/>
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="top" secondItem="LsR-3X-upa" secondAttribute="top" id="cRx-2N-wh7"/>
                             <constraint firstItem="i93-xn-yCz" firstAttribute="top" secondItem="tch-gZ-39o" secondAttribute="top" id="eH1-Kc-wr1"/>
                             <constraint firstItem="tLz-aB-VoI" firstAttribute="centerY" secondItem="tch-gZ-39o" secondAttribute="centerY" id="hWk-sh-eL0"/>
+                            <constraint firstAttribute="trailing" secondItem="Tsx-C8-iiY" secondAttribute="trailing" id="jce-uG-Y8W"/>
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="ltT-CY-vbQ"/>
                             <constraint firstItem="LsR-3X-upa" firstAttribute="trailing" secondItem="n7w-rO-UNR" secondAttribute="trailing" id="m3e-pb-CuI"/>
                             <constraint firstItem="n7w-rO-UNR" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="niQ-bS-Tz6"/>
+                            <constraint firstItem="n7w-rO-UNR" firstAttribute="top" secondItem="Tsx-C8-iiY" secondAttribute="bottom" constant="10" id="wnu-Y3-hwm"/>
+                            <constraint firstItem="Tsx-C8-iiY" firstAttribute="leading" secondItem="tch-gZ-39o" secondAttribute="leading" id="xtw-rS-dDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LsR-3X-upa"/>
                     </view>
@@ -244,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biw-63-eKO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.39999999999998" y="-85.714285714285722"/>
+            <point key="canvasLocation" x="-627.536231884058" y="-85.714285714285708"/>
         </scene>
         <!--City ScreenVC-->
         <scene sceneID="ttR-r3-JHc">
@@ -453,8 +491,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UA5-Gl-Wo8" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Y-Lh-y4Q">
-                                        <rect key="frame" x="189" y="18" width="36.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favourite Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Y-Lh-y4Q">
+                                        <rect key="frame" x="62.5" y="18" width="289" height="24"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -750,6 +788,7 @@
         <image name="bgImage" width="768" height="1024"/>
         <image name="cancel_Icon" width="24" height="24"/>
         <image name="help_icon" width="46" height="46"/>
+        <image name="search_icon" width="43" height="43"/>
         <image name="settings_icon" width="30" height="30"/>
     </resources>
 </document>

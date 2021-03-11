@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
-class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate {
+class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
     
     var locationsViewModels = [LocationViewModel]()
+    var filteredLocationsViewModels = [LocationViewModel]()
     var locationsArray = [Location]()
     let cellId = "LocationCell"
     @IBOutlet weak var mapButton: UIButton!
@@ -66,6 +67,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
                 locationsArray.append(loc)
             }
             self.locationsViewModels = locationsArray.map({return LocationViewModel(location: $0)})
+            self.filteredLocationsViewModels = self.locationsViewModels
 
             if(locationsViewModels.count>0) {
                 noDataLabel.isHidden = true
@@ -84,14 +86,36 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var search: String = ""
+        if string == "" {
+            
+        }else {
+            search = (textField.text ?? "") + string
+        }
+        
+        if search == "" {
+            filteredLocationsViewModels = locationsViewModels
+            self.tableView.reloadData()
+
+            return true
+        }
+        
+        filteredLocationsViewModels = locationsViewModels.filter({(($0.locationName.uppercased().contains(search.uppercased())) || ($0.countryName.uppercased().contains(search.uppercased())) || ($0.address.uppercased().contains(search.uppercased())))})
+        self.tableView.reloadData()
+        return true
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locationsViewModels.count
+        return filteredLocationsViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: LocationCell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
-        let locationViewModel = locationsViewModels[indexPath.row]
+        let locationViewModel = filteredLocationsViewModels[indexPath.row]
         cell.locationViewModel = locationViewModel
         
         cell.cancelButton.addTarget(self, action: #selector(cancelButtonAction), for: .touchUpInside)
@@ -103,7 +127,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vcCityScreen: CityScreenVC = storyboard.instantiateViewController(withIdentifier: "CityScreenVC") as! CityScreenVC
-        vcCityScreen.selectedLocation = locationsViewModels[indexPath.row]
+        vcCityScreen.selectedLocation = filteredLocationsViewModels[indexPath.row]
         self.navigationController?.pushViewController(vcCityScreen, animated: true)
     }
     

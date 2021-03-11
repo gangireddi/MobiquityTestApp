@@ -23,17 +23,7 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
         super.viewDidLoad()
 //            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
-        for loc in locationsViewModels {
-            
-            let lat: Double = Double(loc.latitude) ?? 0.0
-            let lon: Double = Double(loc.longitude) ?? 0.0
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            self.mapView.addAnnotation(annotation)
-            
-        }
-        
-        
+        addAnotationsforInitialSetup()
         
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleTap))
         gestureRecognizer.delegate = self
@@ -41,6 +31,18 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
         // Do any additional setup after loading the view.
     }
     
+    func addAnotationsforInitialSetup() {
+        for loc in locationsViewModels {
+            
+            if let lat: Double = Double(loc.latitude) {
+                let annotation = MKPointAnnotation()
+                if  let lon: Double = Double(loc.longitude){
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                    self.mapView.addAnnotation(annotation)
+                }
+            }
+        }
+    }
     @IBAction func backButtonAction(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
