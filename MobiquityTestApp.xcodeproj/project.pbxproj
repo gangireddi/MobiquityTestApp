@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9CC426225F9E085002A7378 /* MobiquityTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426025F9E085002A7378 /* MobiquityTestApp.xcdatamodeld */; };
+		F9CC426625F9E5EA002A7378 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426525F9E5EA002A7378 /* Constants.swift */; };
+		F9CC426825FA2586002A7378 /* WeatherForecastDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426725FA2586002A7378 /* WeatherForecastDataObject.swift */; };
+		F9CC426A25FA2D20002A7378 /* ListItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426925FA2D20002A7378 /* ListItemObject.swift */; };
+		F9CC426C25FA3076002A7378 /* CityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426B25FA3076002A7378 /* CityObject.swift */; };
+		F9CC426E25FA3676002A7378 /* WeatherForcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC426D25FA3676002A7378 /* WeatherForcastCell.swift */; };
+		F9DD382125F8B31500A38148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD382025F8B31500A38148 /* AppDelegate.swift */; };
+		F9DD382625F8B31500A38148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9DD382425F8B31500A38148 /* Main.storyboard */; };
+		F9DD382825F8B31600A38148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DD382725F8B31600A38148 /* Assets.xcassets */; };
+		F9DD382B25F8B31600A38148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9DD382925F8B31600A38148 /* LaunchScreen.storyboard */; };
+		F9DD383625F8B31700A38148 /* MobiquityTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD383525F8B31700A38148 /* MobiquityTestAppTests.swift */; };
+		F9DD384125F8B31700A38148 /* MobiquityTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD384025F8B31700A38148 /* MobiquityTestAppUITests.swift */; };
+		F9DD385425F8B35B00A38148 /* CityScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD384F25F8B35B00A38148 /* CityScreenVC.swift */; };
+		F9DD385525F8B35B00A38148 /* SettingsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385025F8B35B00A38148 /* SettingsPageVC.swift */; };
+		F9DD385625F8B35B00A38148 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385125F8B35B00A38148 /* BaseViewController.swift */; };
+		F9DD385725F8B35B00A38148 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385225F8B35B00A38148 /* HomeScreenVC.swift */; };
+		F9DD385825F8B35B00A38148 /* HelpScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385325F8B35B00A38148 /* HelpScreenVC.swift */; };
+		F9DD386025F8B5D500A38148 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385F25F8B5D500A38148 /* LocationCell.swift */; };
+		F9DD386225F8B67800A38148 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386125F8B67800A38148 /* LocationViewModel.swift */; };
+		F9DD386425F8B68800A38148 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386325F8B68800A38148 /* Location.swift */; };
+		F9DD386625F8B6AB00A38148 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386525F8B6AB00A38148 /* Service.swift */; };
+		F9DD386825F90AA100A38148 /* MapsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386725F90AA100A38148 /* MapsScreenVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9DD383225F8B31700A38148 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DD381525F8B31500A38148 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9DD381C25F8B31500A38148;
+			remoteInfo = MobiquityTestApp;
+		};
+		F9DD383D25F8B31700A38148 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DD381525F8B31500A38148 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9DD381C25F8B31500A38148;
+			remoteInfo = MobiquityTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9CC426125F9E085002A7378 /* MobiquityTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobiquityTestApp.xcdatamodel; sourceTree = "<group>"; };
+		F9CC426525F9E5EA002A7378 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9CC426725FA2586002A7378 /* WeatherForecastDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastDataObject.swift; sourceTree = "<group>"; };
+		F9CC426925FA2D20002A7378 /* ListItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemObject.swift; sourceTree = "<group>"; };
+		F9CC426B25FA3076002A7378 /* CityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityObject.swift; sourceTree = "<group>"; };
+		F9CC426D25FA3676002A7378 /* WeatherForcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForcastCell.swift; sourceTree = "<group>"; };
+		F9DD381D25F8B31500A38148 /* MobiquityTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiquityTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DD382025F8B31500A38148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9DD382525F8B31500A38148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9DD382725F8B31600A38148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9DD382A25F8B31600A38148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9DD382C25F8B31600A38148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DD383125F8B31700A38148 /* MobiquityTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobiquityTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DD383525F8B31700A38148 /* MobiquityTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityTestAppTests.swift; sourceTree = "<group>"; };
+		F9DD383725F8B31700A38148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DD383C25F8B31700A38148 /* MobiquityTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobiquityTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DD384025F8B31700A38148 /* MobiquityTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityTestAppUITests.swift; sourceTree = "<group>"; };
+		F9DD384225F8B31700A38148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DD384F25F8B35B00A38148 /* CityScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityScreenVC.swift; sourceTree = "<group>"; };
+		F9DD385025F8B35B00A38148 /* SettingsPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageVC.swift; sourceTree = "<group>"; };
+		F9DD385125F8B35B00A38148 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F9DD385225F8B35B00A38148 /* HomeScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		F9DD385325F8B35B00A38148 /* HelpScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenVC.swift; sourceTree = "<group>"; };
+		F9DD385F25F8B5D500A38148 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		F9DD386125F8B67800A38148 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		F9DD386325F8B68800A38148 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F9DD386525F8B6AB00A38148 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F9DD386725F90AA100A38148 /* MapsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsScreenVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9DD381A25F8B31500A38148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD382E25F8B31700A38148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD383925F8B31700A38148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9CC426325F9E5D6002A7378 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9CC426425F9E5D6002A7378 /* Constants */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F9CC426425F9E5D6002A7378 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F9CC426525F9E5EA002A7378 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F9DD381425F8B31500A38148 = {
+			isa = PBXGroup;
+			children = (
+				F9DD381F25F8B31500A38148 /* MobiquityTestApp */,
+				F9DD383425F8B31700A38148 /* MobiquityTestAppTests */,
+				F9DD383F25F8B31700A38148 /* MobiquityTestAppUITests */,
+				F9DD381E25F8B31500A38148 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9DD381E25F8B31500A38148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD381D25F8B31500A38148 /* MobiquityTestApp.app */,
+				F9DD383125F8B31700A38148 /* MobiquityTestAppTests.xctest */,
+				F9DD383C25F8B31700A38148 /* MobiquityTestAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9DD381F25F8B31500A38148 /* MobiquityTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				F9CC426325F9E5D6002A7378 /* Resources */,
+				F9DD385E25F8B3E400A38148 /* Model */,
+				F9DD385925F8B3E400A38148 /* Service */,
+				F9DD385A25F8B3E400A38148 /* View */,
+				F9DD385D25F8B3E400A38148 /* ViewModel */,
+				F9DD384E25F8B34E00A38148 /* Controlers */,
+				F9DD382025F8B31500A38148 /* AppDelegate.swift */,
+				F9DD382425F8B31500A38148 /* Main.storyboard */,
+				F9DD382725F8B31600A38148 /* Assets.xcassets */,
+				F9DD382925F8B31600A38148 /* LaunchScreen.storyboard */,
+				F9DD382C25F8B31600A38148 /* Info.plist */,
+				F9CC426025F9E085002A7378 /* MobiquityTestApp.xcdatamodeld */,
+			);
+			path = MobiquityTestApp;
+			sourceTree = "<group>";
+		};
+		F9DD383425F8B31700A38148 /* MobiquityTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD383525F8B31700A38148 /* MobiquityTestAppTests.swift */,
+				F9DD383725F8B31700A38148 /* Info.plist */,
+			);
+			path = MobiquityTestAppTests;
+			sourceTree = "<group>";
+		};
+		F9DD383F25F8B31700A38148 /* MobiquityTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD384025F8B31700A38148 /* MobiquityTestAppUITests.swift */,
+				F9DD384225F8B31700A38148 /* Info.plist */,
+			);
+			path = MobiquityTestAppUITests;
+			sourceTree = "<group>";
+		};
+		F9DD384E25F8B34E00A38148 /* Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD385125F8B35B00A38148 /* BaseViewController.swift */,
+				F9DD384F25F8B35B00A38148 /* CityScreenVC.swift */,
+				F9DD385325F8B35B00A38148 /* HelpScreenVC.swift */,
+				F9DD385225F8B35B00A38148 /* HomeScreenVC.swift */,
+				F9DD385025F8B35B00A38148 /* SettingsPageVC.swift */,
+				F9DD386725F90AA100A38148 /* MapsScreenVC.swift */,
+			);
+			path = Controlers;
+			sourceTree = "<group>";
+		};
+		F9DD385925F8B3E400A38148 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD386525F8B6AB00A38148 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F9DD385A25F8B3E400A38148 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD385B25F8B3E400A38148 /* CustomCells */,
+				F9DD385C25F8B3E400A38148 /* CustomViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9DD385B25F8B3E400A38148 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD385F25F8B5D500A38148 /* LocationCell.swift */,
+				F9CC426D25FA3676002A7378 /* WeatherForcastCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		F9DD385C25F8B3E400A38148 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F9DD385D25F8B3E400A38148 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD386125F8B67800A38148 /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9DD385E25F8B3E400A38148 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9DD386325F8B68800A38148 /* Location.swift */,
+				F9CC426725FA2586002A7378 /* WeatherForecastDataObject.swift */,
+				F9CC426925FA2D20002A7378 /* ListItemObject.swift */,
+				F9CC426B25FA3076002A7378 /* CityObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9DD381C25F8B31500A38148 /* MobiquityTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DD384525F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestApp" */;
+			buildPhases = (
+				F9DD381925F8B31500A38148 /* Sources */,
+				F9DD381A25F8B31500A38148 /* Frameworks */,
+				F9DD381B25F8B31500A38148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobiquityTestApp;
+			productName = MobiquityTestApp;
+			productReference = F9DD381D25F8B31500A38148 /* MobiquityTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9DD383025F8B31700A38148 /* MobiquityTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DD384825F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestAppTests" */;
+			buildPhases = (
+				F9DD382D25F8B31700A38148 /* Sources */,
+				F9DD382E25F8B31700A38148 /* Frameworks */,
+				F9DD382F25F8B31700A38148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9DD383325F8B31700A38148 /* PBXTargetDependency */,
+			);
+			name = MobiquityTestAppTests;
+			productName = MobiquityTestAppTests;
+			productReference = F9DD383125F8B31700A38148 /* MobiquityTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9DD383B25F8B31700A38148 /* MobiquityTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DD384B25F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestAppUITests" */;
+			buildPhases = (
+				F9DD383825F8B31700A38148 /* Sources */,
+				F9DD383925F8B31700A38148 /* Frameworks */,
+				F9DD383A25F8B31700A38148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9DD383E25F8B31700A38148 /* PBXTargetDependency */,
+			);
+			name = MobiquityTestAppUITests;
+			productName = MobiquityTestAppUITests;
+			productReference = F9DD383C25F8B31700A38148 /* MobiquityTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9DD381525F8B31500A38148 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Sandy;
+				TargetAttributes = {
+					F9DD381C25F8B31500A38148 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					F9DD383025F8B31700A38148 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F9DD381C25F8B31500A38148;
+					};
+					F9DD383B25F8B31700A38148 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F9DD381C25F8B31500A38148;
+					};
+				};
+			};
+			buildConfigurationList = F9DD381825F8B31500A38148 /* Build configuration list for PBXProject "MobiquityTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9DD381425F8B31500A38148;
+			productRefGroup = F9DD381E25F8B31500A38148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9DD381C25F8B31500A38148 /* MobiquityTestApp */,
+				F9DD383025F8B31700A38148 /* MobiquityTestAppTests */,
+				F9DD383B25F8B31700A38148 /* MobiquityTestAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9DD381B25F8B31500A38148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DD382B25F8B31600A38148 /* LaunchScreen.storyboard in Resources */,
+				F9DD382825F8B31600A38148 /* Assets.xcassets in Resources */,
+				F9DD382625F8B31500A38148 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD382F25F8B31700A38148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD383A25F8B31700A38148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9DD381925F8B31500A38148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DD385825F8B35B00A38148 /* HelpScreenVC.swift in Sources */,
+				F9DD385625F8B35B00A38148 /* BaseViewController.swift in Sources */,
+				F9DD382125F8B31500A38148 /* AppDelegate.swift in Sources */,
+				F9DD385525F8B35B00A38148 /* SettingsPageVC.swift in Sources */,
+				F9DD386425F8B68800A38148 /* Location.swift in Sources */,
+				F9CC426A25FA2D20002A7378 /* ListItemObject.swift in Sources */,
+				F9CC426825FA2586002A7378 /* WeatherForecastDataObject.swift in Sources */,
+				F9DD386025F8B5D500A38148 /* LocationCell.swift in Sources */,
+				F9DD386825F90AA100A38148 /* MapsScreenVC.swift in Sources */,
+				F9CC426625F9E5EA002A7378 /* Constants.swift in Sources */,
+				F9CC426E25FA3676002A7378 /* WeatherForcastCell.swift in Sources */,
+				F9DD385425F8B35B00A38148 /* CityScreenVC.swift in Sources */,
+				F9CC426C25FA3076002A7378 /* CityObject.swift in Sources */,
+				F9DD386625F8B6AB00A38148 /* Service.swift in Sources */,
+				F9CC426225F9E085002A7378 /* MobiquityTestApp.xcdatamodeld in Sources */,
+				F9DD385725F8B35B00A38148 /* HomeScreenVC.swift in Sources */,
+				F9DD386225F8B67800A38148 /* LocationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD382D25F8B31700A38148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DD383625F8B31700A38148 /* MobiquityTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DD383825F8B31700A38148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DD384125F8B31700A38148 /* MobiquityTestAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9DD383325F8B31700A38148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9DD381C25F8B31500A38148 /* MobiquityTestApp */;
+			targetProxy = F9DD383225F8B31700A38148 /* PBXContainerItemProxy */;
+		};
+		F9DD383E25F8B31700A38148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9DD381C25F8B31500A38148 /* MobiquityTestApp */;
+			targetProxy = F9DD383D25F8B31700A38148 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9DD382425F8B31500A38148 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9DD382525F8B31500A38148 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9DD382925F8B31600A38148 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9DD382A25F8B31600A38148 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9DD384325F8B31700A38148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9DD384425F8B31700A38148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9DD384625F8B31700A38148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GBYP7T8D6;
+				INFOPLIST_FILE = MobiquityTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandy.MobiquityTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9DD384725F8B31700A38148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GBYP7T8D6;
+				INFOPLIST_FILE = MobiquityTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandy.MobiquityTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9DD384925F8B31700A38148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MobiquityTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sandy.MobiquityTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiquityTestApp.app/MobiquityTestApp";
+			};
+			name = Debug;
+		};
+		F9DD384A25F8B31700A38148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MobiquityTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sandy.MobiquityTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiquityTestApp.app/MobiquityTestApp";
+			};
+			name = Release;
+		};
+		F9DD384C25F8B31700A38148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MobiquityTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sandy.MobiquityTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobiquityTestApp;
+			};
+			name = Debug;
+		};
+		F9DD384D25F8B31700A38148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MobiquityTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sandy.MobiquityTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobiquityTestApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9DD381825F8B31500A38148 /* Build configuration list for PBXProject "MobiquityTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DD384325F8B31700A38148 /* Debug */,
+				F9DD384425F8B31700A38148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DD384525F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DD384625F8B31700A38148 /* Debug */,
+				F9DD384725F8B31700A38148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DD384825F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DD384925F8B31700A38148 /* Debug */,
+				F9DD384A25F8B31700A38148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DD384B25F8B31700A38148 /* Build configuration list for PBXNativeTarget "MobiquityTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DD384C25F8B31700A38148 /* Debug */,
+				F9DD384D25F8B31700A38148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9CC426025F9E085002A7378 /* MobiquityTestApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9CC426125F9E085002A7378 /* MobiquityTestApp.xcdatamodel */,
+			);
+			currentVersion = F9CC426125F9E085002A7378 /* MobiquityTestApp.xcdatamodel */;
+			path = MobiquityTestApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F9DD381525F8B31500A38148 /* Project object */;
+}
