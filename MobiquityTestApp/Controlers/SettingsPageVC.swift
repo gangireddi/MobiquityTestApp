@@ -16,7 +16,11 @@ class SettingsPageVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

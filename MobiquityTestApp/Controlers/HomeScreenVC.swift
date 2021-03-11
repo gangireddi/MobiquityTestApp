@@ -36,6 +36,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     @IBAction func mapButtonAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vcMapsScreen: MapsScreenVC = storyboard.instantiateViewController(withIdentifier: "MapsScreenVC") as! MapsScreenVC
+        vcMapsScreen.locationsViewModels = self.locationsViewModels
         self.navigationController?.pushViewController(vcMapsScreen, animated: true)
     }
     

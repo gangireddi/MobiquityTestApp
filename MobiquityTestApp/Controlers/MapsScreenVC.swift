@@ -13,10 +13,28 @@ import CoreData
 class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationManagerDelegate {
     @IBOutlet private var mapView: MKMapView!
 
-    
+    var locationsViewModels = [LocationViewModel]()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        for loc in locationsViewModels {
+            
+            let lat: Double = Double(loc.latitude) ?? 0.0
+            let lon: Double = Double(loc.longitude) ?? 0.0
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            self.mapView.addAnnotation(annotation)
+            
+        }
+        
+        
+        
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleTap))
         gestureRecognizer.delegate = self
         mapView.addGestureRecognizer(gestureRecognizer)
@@ -41,8 +59,6 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
     func addAnnotation(location: CLLocationCoordinate2D){
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-//        annotation.title = "Some Title"
-//        annotation.subtitle = "Some Subtitle"
         self.mapView.addAnnotation(annotation)
         self.getAddressFromLatLon(pdblLatitude: location.latitude.description, withLongitude: location.longitude.description)
     }

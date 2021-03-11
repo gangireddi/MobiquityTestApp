@@ -77,6 +77,9 @@
                                             <constraint firstAttribute="width" constant="60" id="jh2-wo-m34"/>
                                         </constraints>
                                         <state key="normal" image="settings_icon"/>
+                                        <connections>
+                                            <action selector="settingsButtonAction:" destination="I9q-zo-Dlh" eventType="touchUpInside" id="N0z-10-9wD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.72549019607843135" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -591,6 +594,154 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMl-eb-keI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1575" y="-87"/>
+        </scene>
+        <!--Settings PageVC-->
+        <scene sceneID="wYf-3L-TEy">
+            <objects>
+                <viewController storyboardIdentifier="SettingsPageVC" id="NGN-ws-Q8Y" customClass="SettingsPageVC" customModule="MobiquityTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ale-Dd-Jl5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="CCQ-Fq-nAx">
+                                <rect key="frame" x="0.0" y="4" width="414" height="896"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMJ-2u-ZVS" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D70-gr-B9r">
+                                        <rect key="frame" x="159" y="18" width="96.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYf-eC-59z">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="bMB-SE-EsC"/>
+                                        </constraints>
+                                        <state key="normal" image="backIcon"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="NGN-ws-Q8Y" eventType="touchUpInside" id="fdy-Tz-2L5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OYf-eC-59z" secondAttribute="bottom" id="6o9-sW-cQc"/>
+                                    <constraint firstItem="OYf-eC-59z" firstAttribute="leading" secondItem="YMJ-2u-ZVS" secondAttribute="leading" id="FtP-1f-MKz"/>
+                                    <constraint firstItem="D70-gr-B9r" firstAttribute="centerX" secondItem="YMJ-2u-ZVS" secondAttribute="centerX" id="dlX-Dy-mb0"/>
+                                    <constraint firstItem="D70-gr-B9r" firstAttribute="centerY" secondItem="YMJ-2u-ZVS" secondAttribute="centerY" id="ozg-QS-Ep5"/>
+                                    <constraint firstItem="OYf-eC-59z" firstAttribute="top" secondItem="YMJ-2u-ZVS" secondAttribute="top" id="ytw-1B-c70"/>
+                                    <constraint firstAttribute="height" constant="60" id="z3Z-ol-E9O"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-v1-J7C">
+                                <rect key="frame" x="20" y="154" width="72.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-gs-nfz">
+                                <rect key="frame" x="122.5" y="146" width="135.5" height="40"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.20784313730000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lrf-8P-LL4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <state key="normal" title="metric"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-Al-raG">
+                                <rect key="frame" x="259" y="146" width="135" height="40"/>
+                                <color key="backgroundColor" red="0.131308645" green="0.2139384151" blue="0.45620435479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZV8-vz-z8G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <state key="normal" title="imperial"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset cities bookmarked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jr-yr-eQq">
+                                <rect key="frame" x="20" y="206" width="289" height="24"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnR-RP-XKJ">
+                                <rect key="frame" x="309" y="198" width="85" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.051290923320000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nX9-xj-FRe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <state key="normal" title="Reset"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1jr-yr-eQq" firstAttribute="leading" secondItem="jA9-v1-J7C" secondAttribute="leading" id="6Dz-yd-fIO"/>
+                            <constraint firstItem="CCQ-Fq-nAx" firstAttribute="top" secondItem="ale-Dd-Jl5" secondAttribute="top" id="DDc-MM-ksr"/>
+                            <constraint firstItem="CCQ-Fq-nAx" firstAttribute="trailing" secondItem="rSh-mt-wxQ" secondAttribute="trailing" id="GWw-lK-Wsw"/>
+                            <constraint firstItem="YMJ-2u-ZVS" firstAttribute="trailing" secondItem="rSh-mt-wxQ" secondAttribute="trailing" id="M6A-BT-nPE"/>
+                            <constraint firstItem="jA9-v1-J7C" firstAttribute="leading" secondItem="rSh-mt-wxQ" secondAttribute="leading" constant="20" id="P4p-hH-5jr"/>
+                            <constraint firstItem="rSh-mt-wxQ" firstAttribute="trailing" secondItem="FnR-RP-XKJ" secondAttribute="trailing" constant="20" id="PwN-go-0HC"/>
+                            <constraint firstItem="YMJ-2u-ZVS" firstAttribute="leading" secondItem="rSh-mt-wxQ" secondAttribute="leading" id="QVk-aH-pwe"/>
+                            <constraint firstItem="YMJ-2u-ZVS" firstAttribute="top" secondItem="rSh-mt-wxQ" secondAttribute="top" id="YGD-C8-Cyh"/>
+                            <constraint firstItem="wfu-Al-raG" firstAttribute="leading" secondItem="HBX-gs-nfz" secondAttribute="trailing" constant="1" id="YcC-L5-YJB"/>
+                            <constraint firstItem="1jr-yr-eQq" firstAttribute="top" secondItem="HBX-gs-nfz" secondAttribute="bottom" constant="20" id="ZjP-Rh-dHf"/>
+                            <constraint firstItem="FnR-RP-XKJ" firstAttribute="leading" secondItem="1jr-yr-eQq" secondAttribute="trailing" id="bY4-SJ-VUu"/>
+                            <constraint firstItem="jA9-v1-J7C" firstAttribute="top" secondItem="YMJ-2u-ZVS" secondAttribute="bottom" constant="50" id="d1S-zn-sNW"/>
+                            <constraint firstAttribute="bottom" secondItem="CCQ-Fq-nAx" secondAttribute="bottom" id="irW-3l-9ud"/>
+                            <constraint firstItem="HBX-gs-nfz" firstAttribute="leading" secondItem="jA9-v1-J7C" secondAttribute="trailing" constant="30" id="lQx-kO-0CO"/>
+                            <constraint firstItem="FnR-RP-XKJ" firstAttribute="centerY" secondItem="1jr-yr-eQq" secondAttribute="centerY" id="pRl-B9-U6I"/>
+                            <constraint firstItem="rSh-mt-wxQ" firstAttribute="trailing" secondItem="wfu-Al-raG" secondAttribute="trailing" constant="20" id="rCt-2p-Qvd"/>
+                            <constraint firstItem="CCQ-Fq-nAx" firstAttribute="leading" secondItem="rSh-mt-wxQ" secondAttribute="leading" id="rYv-kq-vj0"/>
+                            <constraint firstItem="HBX-gs-nfz" firstAttribute="centerY" secondItem="jA9-v1-J7C" secondAttribute="centerY" id="uHo-Dz-reb"/>
+                            <constraint firstItem="wfu-Al-raG" firstAttribute="width" secondItem="HBX-gs-nfz" secondAttribute="width" id="uuB-Dj-3qp"/>
+                            <constraint firstItem="wfu-Al-raG" firstAttribute="centerY" secondItem="jA9-v1-J7C" secondAttribute="centerY" id="zEz-85-hh8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rSh-mt-wxQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8W-1Z-ifd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2260.8695652173915" y="-98.4375"/>
         </scene>
     </scenes>
     <resources>
