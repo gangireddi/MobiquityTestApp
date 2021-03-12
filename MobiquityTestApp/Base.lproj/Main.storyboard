@@ -81,7 +81,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0039215686274509803" green="0.72549019607843135" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1z3-Z0-sBP">
                                         <variation key="heightClass=regular-widthClass=compact" constant="60"/>
@@ -122,7 +122,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.033778809010000001" green="0.54098916050000001" blue="0.60638666149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hbZ-fd-Ssb" firstAttribute="top" secondItem="Tsx-C8-iiY" secondAttribute="top" id="0C8-sz-ZhV"/>
                                     <constraint firstItem="Bsx-Eb-DRT" firstAttribute="leading" secondItem="Tsx-C8-iiY" secondAttribute="leading" constant="10" id="0gs-L3-kzl"/>
@@ -324,7 +324,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0039215686274509803" green="0.72549019607843135" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="XP3-Ew-xlh" firstAttribute="centerY" secondItem="dAO-V9-0BU" secondAttribute="centerY" id="EYi-4h-ktj"/>
                                     <constraint firstItem="EHY-y6-eIk" firstAttribute="leading" secondItem="dAO-V9-0BU" secondAttribute="leading" id="LJM-uS-ncN"/>
@@ -532,7 +532,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0039215686274509803" green="0.72549019607843135" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Tkh-Y7-TXF" firstAttribute="top" secondItem="UA5-Gl-Wo8" secondAttribute="top" id="Emv-IT-fYP"/>
                                     <constraint firstItem="Q7Y-Lh-y4Q" firstAttribute="centerY" secondItem="UA5-Gl-Wo8" secondAttribute="centerY" id="dlp-wJ-4Ry"/>
@@ -608,7 +608,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="a74-XM-J2i" firstAttribute="centerX" secondItem="dIQ-vU-u65" secondAttribute="centerX" id="PLq-BS-IzY"/>
                                     <constraint firstAttribute="height" constant="60" id="adq-mb-oHZ"/>
@@ -689,7 +689,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6817209125" blue="0.9480481744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="OYf-eC-59z" secondAttribute="bottom" id="6o9-sW-cQc"/>
                                     <constraint firstItem="OYf-eC-59z" firstAttribute="leading" secondItem="YMJ-2u-ZVS" secondAttribute="leading" id="FtP-1f-MKz"/>
@@ -711,9 +711,9 @@
                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-gs-nfz">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBX-gs-nfz" customClass="CustomSettingsButton" customModule="MobiquityTestApp" customModuleProvider="target">
                                 <rect key="frame" x="122.5" y="146" width="135.5" height="40"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.20784313730000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lrf-8P-LL4"/>
                                 </constraints>
@@ -725,10 +725,13 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 </variation>
+                                <connections>
+                                    <action selector="changeUnitsButtonAction:" destination="NGN-ws-Q8Y" eventType="touchUpInside" id="Fhn-xK-kgG"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-Al-raG">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-Al-raG" customClass="CustomSettingsButton" customModule="MobiquityTestApp" customModuleProvider="target">
                                 <rect key="frame" x="259" y="146" width="135" height="40"/>
-                                <color key="backgroundColor" red="0.131308645" green="0.2139384151" blue="0.45620435479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZV8-vz-z8G"/>
                                 </constraints>
@@ -740,6 +743,9 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 </variation>
+                                <connections>
+                                    <action selector="changeUnitsButtonAction:" destination="NGN-ws-Q8Y" eventType="touchUpInside" id="HkS-2B-Zmm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset cities bookmarked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jr-yr-eQq">
                                 <rect key="frame" x="20" y="206" width="289" height="24"/>
@@ -797,6 +803,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSh-mt-wxQ"/>
                     </view>
+                    <connections>
+                        <outlet property="imperialButton" destination="wfu-Al-raG" id="Qdl-zC-NDA"/>
+                        <outlet property="metricButton" destination="HBX-gs-nfz" id="O5q-mY-0TS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8W-1Z-ifd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

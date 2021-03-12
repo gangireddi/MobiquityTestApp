@@ -31,17 +31,8 @@ class LocationCell: UITableViewCell {
             address.text = locationModel.address
         }
     }
-//
-//    override init(style: LocationCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError()
-//    }
 }
 
 class CustomCloseButton: UIButton {
-    var isToClear: Bool = false
     var selectedIndex: Int = -1
 }

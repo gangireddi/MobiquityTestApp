@@ -52,17 +52,17 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         let _context = appDelegate.persistentContainer.viewContext
 
         locationsArray.removeAll()
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_LOCATIONS)
         request.returnsObjectsAsFaults = false
         do {
             let result = try _context.fetch(request)
             managedObjectsArray = result as! [NSManagedObject]
             for data in result as! [NSManagedObject] {
-                let address = data.value(forKey: "address") as! String
-                let latitude = data.value(forKey: "latitude") as! String
-                let longitude = data.value(forKey: "longitude") as! String
-                let locationName = data.value(forKey: "locationName") as! String
-                let country = data.value(forKey: "country") as! String
+                let address = data.value(forKey: ENTITY_ATTR_ADDRESS) as! String
+                let latitude = data.value(forKey: ENTITY_ATTR_LATITUDE) as! String
+                let longitude = data.value(forKey: ENTITY_ATTR_LONGITUDE) as! String
+                let locationName = data.value(forKey: ENTITY_ATTR_LOCATION_NAME) as! String
+                let country = data.value(forKey: ENTITY_ATTR_COUNTRY) as! String
                 
                 let loc = Location(address: address,latitude: latitude,longitude: longitude,locationName: locationName,country: country)
                 locationsArray.append(loc)
@@ -82,6 +82,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         noDataLabel.isHidden = isHide
     }
     
+    // MARK: - UITextField deleagte methods implenetation
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -111,6 +112,8 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         return true
     }
     
+    // MARK: - UITableView deleagte/datasource methods implenetation
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredlocationsArray.count
     }
@@ -137,7 +140,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         
         let context = appDelegate.persistentContainer.viewContext
 
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_LOCATIONS)
 
         let location = filteredlocationsArray[sender.selectedIndex]
         let index: Int = locationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1

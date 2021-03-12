@@ -30,7 +30,7 @@ class CityScreenVC: BaseViewController {
     func callApi() {
         
         openloader()
-        Service.shared.fetchData(lat: selectedLocation?.latitude ?? "", lon: selectedLocation?.longitude ?? "", units: "metric") { (responseDataObject, error) in
+        Service.shared.fetchData(lat: selectedLocation?.latitude ?? "", lon: selectedLocation?.longitude ?? "", units: appDelegate.selectedUnits) { (responseDataObject, error) in
             self.responseDataObject = responseDataObject
             self.collectionVw.reloadData()
             self.closeLoader()

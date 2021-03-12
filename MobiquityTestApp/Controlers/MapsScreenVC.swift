@@ -115,7 +115,7 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
     
     func isEntityAttributeExist(latitude: String, longitude: String) -> Bool {
         let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_LOCATIONS)
         fetchRequest.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", latitude,longitude)
         let res = try! context.fetch(fetchRequest)
         return res.count > 0 ? true : false
@@ -128,14 +128,14 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
         }
         
         let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Locations", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: ENTITY_LOCATIONS, in: context)
         let newLocation = NSManagedObject(entity: entity!, insertInto: context)
         
-        newLocation.setValue(address, forKey: "address")
-        newLocation.setValue(lat, forKey: "latitude")
-        newLocation.setValue(lon, forKey: "longitude")
-        newLocation.setValue(locName, forKey: "locationName")
-        newLocation.setValue(countryName, forKey: "country")
+        newLocation.setValue(address, forKey: ENTITY_ATTR_ADDRESS)
+        newLocation.setValue(lat, forKey: ENTITY_ATTR_LATITUDE)
+        newLocation.setValue(lon, forKey: ENTITY_ATTR_LONGITUDE)
+        newLocation.setValue(locName, forKey: ENTITY_ATTR_LOCATION_NAME)
+        newLocation.setValue(countryName, forKey: ENTITY_ATTR_COUNTRY)
         
         do {
             try context.save()
