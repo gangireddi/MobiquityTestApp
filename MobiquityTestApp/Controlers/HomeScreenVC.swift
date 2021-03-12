@@ -149,28 +149,26 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         
 //        let context = appDelegate.persistentContainer.viewContext
 //        
-//        do {
-//            try context.delete(managedObjectsArray.first!)
-//        } catch {
-//            print("Failed saving")
-//        }
-        
-//        let entity = NSEntityDescription.entity(forEntityName: "Locations", in: context)
-//
-//
 //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
 //
-//        let location = locationsViewModels[sender.selectedIndex]
-//        let index: Int = locationsViewModels.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
-//        locationsViewModels.remove(at: index)
-//        fetchRequest.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", location.latitude,location.longitude)
-//
-//        if let result = try? context.fetch(fetchRequest) {
-//            for object in result {
-//                context.delete(object as! NSManagedObject)
-//            }
+//        let location = filteredlocationsArray[sender.selectedIndex]
+//        let index: Int = locationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
+//        let index1: Int = filteredlocationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
+//        locationsArray.remove(at: index)
+//        locationsArray.remove(at: index1)
+//        fetchRequest.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", location.latitude ?? "",location.longitude ?? "")
+//        do {
+//            let result = try context.fetch(fetchRequest)
+//            for data in result as! [NSManagedObject] {
+//                let obj: NSManagedObject = data
+//                context.delete(obj)
+//                do {
+//                    try context.save()
+//                    self.tableView.reloadData()
+//                }
+//          }
+//        } catch {
+//            print("Failed")
 //        }
-//
-//
     }
 }
