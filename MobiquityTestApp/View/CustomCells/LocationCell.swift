@@ -24,11 +24,11 @@ class LocationCell: UITableViewCell {
         
         
     }
-    var locationViewModel: LocationViewModel! {
+    var locationModel: Location! {
         didSet {
-            countryName.text = locationViewModel.countryName
-            locationName.text = locationViewModel.locationName
-            address.text = locationViewModel.address
+            countryName.text = locationModel.country
+            locationName.text = locationModel.locationName
+            address.text = locationModel.address
         }
     }
 //

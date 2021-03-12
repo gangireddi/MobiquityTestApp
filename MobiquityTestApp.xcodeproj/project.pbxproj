@@ -25,7 +25,6 @@
 		F9DD385725F8B35B00A38148 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385225F8B35B00A38148 /* HomeScreenVC.swift */; };
 		F9DD385825F8B35B00A38148 /* HelpScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385325F8B35B00A38148 /* HelpScreenVC.swift */; };
 		F9DD386025F8B5D500A38148 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD385F25F8B5D500A38148 /* LocationCell.swift */; };
-		F9DD386225F8B67800A38148 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386125F8B67800A38148 /* LocationViewModel.swift */; };
 		F9DD386425F8B68800A38148 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386325F8B68800A38148 /* Location.swift */; };
 		F9DD386625F8B6AB00A38148 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386525F8B6AB00A38148 /* Service.swift */; };
 		F9DD386825F90AA100A38148 /* MapsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DD386725F90AA100A38148 /* MapsScreenVC.swift */; };
@@ -73,7 +72,6 @@
 		F9DD385225F8B35B00A38148 /* HomeScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		F9DD385325F8B35B00A38148 /* HelpScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScreenVC.swift; sourceTree = "<group>"; };
 		F9DD385F25F8B5D500A38148 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
-		F9DD386125F8B67800A38148 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		F9DD386325F8B68800A38148 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F9DD386525F8B6AB00A38148 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F9DD386725F90AA100A38148 /* MapsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsScreenVC.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				F9DD385E25F8B3E400A38148 /* Model */,
 				F9DD385925F8B3E400A38148 /* Service */,
 				F9DD385A25F8B3E400A38148 /* View */,
-				F9DD385D25F8B3E400A38148 /* ViewModel */,
 				F9DD384E25F8B34E00A38148 /* Controlers */,
 				F9DD382025F8B31500A38148 /* AppDelegate.swift */,
 				F9DD382425F8B31500A38148 /* Main.storyboard */,
@@ -221,14 +218,6 @@
 			children = (
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		F9DD385D25F8B3E400A38148 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F9DD386125F8B67800A38148 /* LocationViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F9DD385E25F8B3E400A38148 /* Model */ = {
@@ -389,7 +378,6 @@
 				F9DD386625F8B6AB00A38148 /* Service.swift in Sources */,
 				F9CC426225F9E085002A7378 /* MobiquityTestApp.xcdatamodeld in Sources */,
 				F9DD385725F8B35B00A38148 /* HomeScreenVC.swift in Sources */,
-				F9DD386225F8B67800A38148 /* LocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

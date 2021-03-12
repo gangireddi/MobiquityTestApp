@@ -17,12 +17,12 @@ class CityScreenVC: BaseViewController {
     @IBOutlet weak var collectionVw: UICollectionView!
     @IBOutlet weak var locationName: UILabel!
     
-    var selectedLocation: LocationViewModel?
+    var selectedLocation: Location?
     var responseDataObject: WeatherForecastDataObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationName.text = (selectedLocation?.countryName ?? "...") + "," + (selectedLocation?.locationName ?? "...")
+        locationName.text = (selectedLocation?.country ?? "...") + "," + (selectedLocation?.locationName ?? "...")
         
         callApi()
         // Do any additional setup after loading the view.

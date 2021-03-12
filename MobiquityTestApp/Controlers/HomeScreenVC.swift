@@ -11,9 +11,8 @@ import CoreData
 
 class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
     
-    var locationsViewModels = [LocationViewModel]()
-    var filteredLocationsViewModels = [LocationViewModel]()
     var locationsArray = [Location]()
+    var filteredlocationsArray = [Location]()
     let cellId = "LocationCell"
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -38,7 +37,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     @IBAction func mapButtonAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vcMapsScreen: MapsScreenVC = storyboard.instantiateViewController(withIdentifier: "MapsScreenVC") as! MapsScreenVC
-        vcMapsScreen.locationsViewModels = self.locationsViewModels
+        vcMapsScreen.locations = self.locationsArray
         self.navigationController?.pushViewController(vcMapsScreen, animated: true)
     }
     
@@ -68,10 +67,9 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
                 let loc = Location(address: address,latitude: latitude,longitude: longitude,locationName: locationName,country: country)
                 locationsArray.append(loc)
             }
-            self.locationsViewModels = locationsArray.map({return LocationViewModel(location: $0)})
-            self.filteredLocationsViewModels = self.locationsViewModels
+            self.filteredlocationsArray = self.locationsArray
 
-            if(locationsViewModels.count>0) {
+            if(self.filteredlocationsArray.count>0) {
                 noDataLabel.isHidden = true
                 self.tableView.reloadData()
             }else {
@@ -103,27 +101,36 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         }
         
         if search == "" {
-            filteredLocationsViewModels = locationsViewModels
+            filteredlocationsArray = locationsArray
             self.tableView.reloadData()
+            
+            if(self.filteredlocationsArray.count>0) {
+                noDataLabel.isHidden = true
+            }else {
+                noDataLabel.isHidden = false
+            }
 
             return true
         }
         
-        filteredLocationsViewModels = locationsViewModels.filter({(($0.locationName.uppercased().contains(search.uppercased())) || ($0.countryName.uppercased().contains(search.uppercased())) || ($0.address.uppercased().contains(search.uppercased())))})
+        filteredlocationsArray = locationsArray.filter({(($0.locationName?.uppercased().contains(search.uppercased()) ?? false) || ($0.country?.uppercased().contains(search.uppercased()) ?? false) || ($0.address?.uppercased().contains(search.uppercased()) ?? false))})
         self.tableView.reloadData()
+        if(self.filteredlocationsArray.count>0) {
+            noDataLabel.isHidden = true
+        }else {
+            noDataLabel.isHidden = false
+        }
         return true
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredLocationsViewModels.count
+        return filteredlocationsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: LocationCell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
-        let locationViewModel = filteredLocationsViewModels[indexPath.row]
-        cell.locationViewModel = locationViewModel
+        cell.locationModel = filteredlocationsArray[indexPath.row]
         
         cell.cancelButton.addTarget(self, action: #selector(cancelButtonAction), for: .touchUpInside)
         cell.cancelButton.selectedIndex = indexPath.row
@@ -134,7 +141,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vcCityScreen: CityScreenVC = storyboard.instantiateViewController(withIdentifier: "CityScreenVC") as! CityScreenVC
-        vcCityScreen.selectedLocation = filteredLocationsViewModels[indexPath.row]
+        vcCityScreen.selectedLocation = filteredlocationsArray[indexPath.row]
         self.navigationController?.pushViewController(vcCityScreen, animated: true)
     }
     

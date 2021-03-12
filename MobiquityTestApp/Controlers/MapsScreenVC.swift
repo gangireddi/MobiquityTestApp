@@ -13,7 +13,7 @@ import CoreData
 class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationManagerDelegate {
     @IBOutlet private var mapView: MKMapView!
 
-    var locationsViewModels = [LocationViewModel]()
+    var locations = [Location]()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,11 +32,11 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
     }
     
     func addAnotationsforInitialSetup() {
-        for loc in locationsViewModels {
+        for loc in locations {
             
-            if let lat: Double = Double(loc.latitude) {
+            if let lat: Double = Double(loc.latitude ?? "0.0") {
                 let annotation = MKPointAnnotation()
-                if  let lon: Double = Double(loc.longitude){
+                if  let lon: Double = Double(loc.longitude ?? "0.0"){
                     annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                     self.mapView.addAnnotation(annotation)
                 }
