@@ -414,15 +414,15 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hup-o1-7V0">
-                                                    <rect key="frame" x="5" y="181" width="384.5" height="14"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
+                                                    <rect key="frame" x="5" y="183" width="384.5" height="12"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="10"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="10"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
