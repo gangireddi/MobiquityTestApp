@@ -21,7 +21,7 @@ class MapsScreenVC: BaseViewController,UIGestureRecognizerDelegate,CLLocationMan
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
         addAnotationsforInitialSetup()
         

@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsPageVC: BaseViewController {
 
+    var locations = [Location]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,14 +24,23 @@ class SettingsPageVC: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
+    @IBAction func resetBookMarkedCitiesButtonAction(_ sender: UIButton) {
+        
+        let context = appDelegate.persistentContainer.viewContext
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
+
+        do {
+            let result = try context.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                let obj: NSManagedObject = data
+                context.delete(obj)
+                do {
+                    try context.save()
+                }
+          }
+        } catch {
+            print("Failed")
+        }
     }
-    */
-
 }

@@ -69,12 +69,8 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
             }
             self.filteredlocationsArray = self.locationsArray
 
-            if(self.filteredlocationsArray.count>0) {
-                noDataLabel.isHidden = true
-                self.tableView.reloadData()
-            }else {
-                noDataLabel.isHidden = false
-            }
+            showOrHideNoDataText(isHide: (self.filteredlocationsArray.count > 0) ? true : false)
+            self.tableView.reloadData()
             
         } catch {
             
@@ -82,8 +78,8 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
         }
     }
     
-    @objc func updateTable(){
-        
+    func showOrHideNoDataText(isHide: Bool) {
+        noDataLabel.isHidden = isHide
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -104,22 +100,14 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
             filteredlocationsArray = locationsArray
             self.tableView.reloadData()
             
-            if(self.filteredlocationsArray.count>0) {
-                noDataLabel.isHidden = true
-            }else {
-                noDataLabel.isHidden = false
-            }
+           showOrHideNoDataText(isHide: (self.filteredlocationsArray.count > 0) ? true : false)
 
             return true
         }
         
         filteredlocationsArray = locationsArray.filter({(($0.locationName?.uppercased().contains(search.uppercased()) ?? false) || ($0.country?.uppercased().contains(search.uppercased()) ?? false) || ($0.address?.uppercased().contains(search.uppercased()) ?? false))})
         self.tableView.reloadData()
-        if(self.filteredlocationsArray.count>0) {
-            noDataLabel.isHidden = true
-        }else {
-            noDataLabel.isHidden = false
-        }
+        showOrHideNoDataText(isHide: (self.filteredlocationsArray.count > 0) ? true : false)
         return true
     }
     
@@ -147,28 +135,31 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     
     @objc func cancelButtonAction(sender: CustomCloseButton) {
         
-//        let context = appDelegate.persistentContainer.viewContext
-//        
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
-//
-//        let location = filteredlocationsArray[sender.selectedIndex]
-//        let index: Int = locationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
-//        let index1: Int = filteredlocationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
-//        locationsArray.remove(at: index)
-//        locationsArray.remove(at: index1)
-//        fetchRequest.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", location.latitude ?? "",location.longitude ?? "")
-//        do {
-//            let result = try context.fetch(fetchRequest)
-//            for data in result as! [NSManagedObject] {
-//                let obj: NSManagedObject = data
-//                context.delete(obj)
-//                do {
-//                    try context.save()
-//                    self.tableView.reloadData()
-//                }
-//          }
-//        } catch {
-//            print("Failed")
-//        }
+        let context = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
+
+        let location = filteredlocationsArray[sender.selectedIndex]
+        let index: Int = locationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
+        let index1: Int = filteredlocationsArray.firstIndex(where: {$0.latitude == location.latitude && $0.longitude == location.longitude}) ?? -1
+        locationsArray.remove(at: index)
+        filteredlocationsArray.remove(at: index1)
+        
+        showOrHideNoDataText(isHide: (self.filteredlocationsArray.count > 0) ? true : false)
+        
+        fetchRequest.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", location.latitude ?? "",location.longitude ?? "")
+        do {
+            let result = try context.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                let obj: NSManagedObject = data
+                context.delete(obj)
+                self.tableView.reloadData()
+                do {
+                    try context.save()
+                }
+          }
+        } catch {
+            print("Failed")
+        }
     }
 }

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ku1-nv-uhU">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ku1-nv-uhU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,7 +105,6 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-Eb-DRT">
                                         <rect key="frame" x="10" y="5" width="354" height="40"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -145,11 +143,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DU7-fK-IAj" id="eBJ-Ct-ayf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-7T-bzs">
-                                                    <rect key="frame" x="10" y="3" width="394" height="101.5"/>
+                                                    <rect key="frame" x="10" y="3" width="394" height="102"/>
                                                     <color key="backgroundColor" red="0.15071690082550049" green="0.34561371803283691" blue="0.43648651242256165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -179,7 +177,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHM-Rr-uJD">
-                                                    <rect key="frame" x="20" y="46" width="374" height="19"/>
+                                                    <rect key="frame" x="20" y="46" width="374" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -191,7 +189,10 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-eA-KUB">
-                                                    <rect key="frame" x="20" y="75" width="374" height="17.5"/>
+                                                    <rect key="frame" x="20" y="75.5" width="374" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17.5" id="HcB-cu-R7e"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -217,6 +218,7 @@
                                                 <constraint firstItem="WHM-Rr-uJD" firstAttribute="trailing" secondItem="vIs-k6-VGG" secondAttribute="trailing" id="aBO-oj-JPw"/>
                                                 <constraint firstAttribute="trailing" secondItem="eVJ-7T-bzs" secondAttribute="trailing" constant="10" id="bAi-ob-6hr"/>
                                                 <constraint firstItem="8jd-eA-KUB" firstAttribute="leading" secondItem="WHM-Rr-uJD" secondAttribute="leading" id="cvB-Se-XTe"/>
+                                                <constraint firstItem="WHM-Rr-uJD" firstAttribute="top" secondItem="npy-Fs-1JG" secondAttribute="bottom" constant="3" id="iKK-q8-sg6"/>
                                                 <constraint firstItem="eVJ-7T-bzs" firstAttribute="top" secondItem="eBJ-Ct-ayf" secondAttribute="top" constant="3" id="o0w-Fm-NwA"/>
                                                 <constraint firstItem="npy-Fs-1JG" firstAttribute="top" secondItem="eVJ-7T-bzs" secondAttribute="top" id="s4b-Wf-VAg"/>
                                                 <constraint firstItem="vIs-k6-VGG" firstAttribute="leading" secondItem="eBJ-Ct-ayf" secondAttribute="leading" constant="20" id="sWw-JC-ALA"/>
@@ -765,6 +767,9 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 </variation>
+                                <connections>
+                                    <action selector="resetBookMarkedCitiesButtonAction:" destination="NGN-ws-Q8Y" eventType="touchUpInside" id="fOq-Th-reP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
