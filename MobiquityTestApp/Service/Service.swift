@@ -4,7 +4,7 @@ class Service: NSObject {
     static let shared = Service()
     
     func fetchData(lat:String,lon: String,units: String, completion: @escaping (WeatherForecastDataObject?, Error?) -> ()) {
-        let urlString = String(format: BASE_URL, lat,lon,API_CODE,units)
+        let urlString = String(format: BASE_URL, lat,lon,API_KEY,units)
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             if let err = err {
