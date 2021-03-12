@@ -18,6 +18,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noDataLabel: UILabel!
+    var managedObjectsArray = [NSManagedObject]()
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,11 +52,12 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
                 
         let _context = appDelegate.persistentContainer.viewContext
 
-        
+        locationsArray.removeAll()
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Locations")
         request.returnsObjectsAsFaults = false
         do {
             let result = try _context.fetch(request)
+            managedObjectsArray = result as! [NSManagedObject]
             for data in result as! [NSManagedObject] {
                 let address = data.value(forKey: "address") as! String
                 let latitude = data.value(forKey: "latitude") as! String
@@ -73,7 +75,7 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
                 noDataLabel.isHidden = true
                 self.tableView.reloadData()
             }else {
-                noDataLabel.isHidden = true
+                noDataLabel.isHidden = false
             }
             
         } catch {
@@ -84,6 +86,11 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     
     @objc func updateTable(){
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -134,6 +141,13 @@ class HomeScreenVC: BaseViewController,UITableViewDataSource,UITableViewDelegate
     @objc func cancelButtonAction(sender: CustomCloseButton) {
         
 //        let context = appDelegate.persistentContainer.viewContext
+//        
+//        do {
+//            try context.delete(managedObjectsArray.first!)
+//        } catch {
+//            print("Failed saving")
+//        }
+        
 //        let entity = NSEntityDescription.entity(forEntityName: "Locations", in: context)
 //
 //

@@ -24,14 +24,29 @@ class CityScreenVC: BaseViewController {
         super.viewDidLoad()
         locationName.text = (selectedLocation?.countryName ?? "...") + "," + (selectedLocation?.locationName ?? "...")
         
+        callApi()
+        // Do any additional setup after loading the view.
+    }
+    func callApi() {
+        
+        openloader()
         Service.shared.fetchData(lat: selectedLocation?.latitude ?? "", lon: selectedLocation?.longitude ?? "", units: "metric") { (responseDataObject, error) in
             self.responseDataObject = responseDataObject
             self.collectionVw.reloadData()
+            self.closeLoader()
         }
-        
-        
-
-        // Do any additional setup after loading the view.
+    }
+    
+    func openloader() {
+        let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicatorView.center = self.view.center
+        activityIndicatorView.startAnimating()
+        activityIndicatorView.tag = 12345
+        self.view.addSubview(activityIndicatorView)
+    }
+    
+    func closeLoader() {
+        self.view.viewWithTag(12345)?.removeFromSuperview()
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
@@ -65,6 +80,9 @@ extension CityScreenVC: UICollectionViewDataSource,UICollectionViewDelegate,UICo
             cell.imvBg.backgroundColor = UIColor(red: 102.0/255, green: 122.0/255, blue: 125.0/255, alpha: 1.0).withAlphaComponent(0.54)
         }
         
+        if let dt_txt = responseDataObject?.list?[indexPath.item].dt_txt {
+            cell.dateTimeInfoLabel.text = "\(dt_txt)"
+        }
         if let obj: MainObject = responseDataObject?.list?[indexPath.item].main {
             if let temp = obj.temp {
                 cell.tempartureInfoLabel.text = "Temparature: \(String(describing: temp))"

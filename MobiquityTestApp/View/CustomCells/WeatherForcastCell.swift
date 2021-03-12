@@ -17,6 +17,9 @@ class WeatherForcastCell: UICollectionViewCell {
     @IBOutlet weak var windInfoLabel: UILabel!
 
     @IBOutlet weak var rainChancesInfoLabel: UILabel!
+    
+    @IBOutlet weak var dateTimeInfoLabel: UILabel!
+
     @IBOutlet weak var imvBg: UIImageView!
 
     
