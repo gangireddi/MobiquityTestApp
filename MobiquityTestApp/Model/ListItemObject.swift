@@ -15,7 +15,7 @@ struct ListItemObject: Decodable {
     var clouds: [String: Int]?
     var wind: WindObject?
     var visibility: Int?
-    var pop: Int?
+    var pop: Double?
     var sys: [String: String]?
     var dt_txt: String?
 }
