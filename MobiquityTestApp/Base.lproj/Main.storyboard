@@ -358,12 +358,13 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="8"/>
+                                                            <integer key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Temparature Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-N1-pC5">
-                                                    <rect key="frame" x="20" y="10" width="364.5" height="40"/>
+                                                    <rect key="frame" x="10" y="10" width="374.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="egm-Yf-FXA"/>
                                                     </constraints>
@@ -378,39 +379,42 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Wind Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-qm-GHb">
-                                                    <rect key="frame" x="20" y="55" width="384.5" height="40"/>
+                                                    <rect key="frame" x="10" y="55" width="374.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.96575695279999996" green="0.46990579370000002" blue="0.092313684519999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Humidity Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-Sh-RaR">
-                                                    <rect key="frame" x="20" y="100" width="384.5" height="40"/>
+                                                    <rect key="frame" x="10" y="100" width="374.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5q-QH-Hye">
-                                                    <rect key="frame" x="20" y="145" width="384.5" height="40"/>
+                                                    <rect key="frame" x="10" y="145" width="374.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.2439174107" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hup-o1-7V0">
@@ -430,8 +434,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="n5q-QH-Hye" firstAttribute="top" secondItem="CTW-Sh-RaR" secondAttribute="bottom" constant="5" id="2vY-Z0-J0a"/>
-                                            <constraint firstItem="H3z-N1-pC5" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" constant="20" id="3GD-fe-2kk"/>
+                                            <constraint firstItem="H3z-N1-pC5" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" constant="10" id="3GD-fe-2kk"/>
                                             <constraint firstItem="CTW-Sh-RaR" firstAttribute="height" secondItem="GRg-qm-GHb" secondAttribute="height" id="4uz-pP-1Jo"/>
+                                            <constraint firstItem="GRg-qm-GHb" firstAttribute="trailing" secondItem="H3z-N1-pC5" secondAttribute="trailing" id="7w6-ys-j86"/>
                                             <constraint firstItem="CTW-Sh-RaR" firstAttribute="trailing" secondItem="GRg-qm-GHb" secondAttribute="trailing" id="AY3-XN-qY5"/>
                                             <constraint firstAttribute="trailing" secondItem="H3z-N1-pC5" secondAttribute="trailing" constant="10" id="I4G-FW-S7X"/>
                                             <constraint firstAttribute="trailing" secondItem="ZJE-hZ-EN5" secondAttribute="trailing" id="JV2-9j-LKh"/>
@@ -441,7 +446,6 @@
                                             <constraint firstItem="n5q-QH-Hye" firstAttribute="trailing" secondItem="CTW-Sh-RaR" secondAttribute="trailing" id="ary-hr-0nX"/>
                                             <constraint firstItem="GRg-qm-GHb" firstAttribute="height" secondItem="H3z-N1-pC5" secondAttribute="height" id="eji-wk-Vdv"/>
                                             <constraint firstItem="GRg-qm-GHb" firstAttribute="top" secondItem="H3z-N1-pC5" secondAttribute="bottom" constant="5" id="hTq-qO-T0d"/>
-                                            <constraint firstItem="GRg-qm-GHb" firstAttribute="trailing" secondItem="H3z-N1-pC5" secondAttribute="trailing" constant="20" id="iuB-8X-T95"/>
                                             <constraint firstAttribute="bottom" secondItem="ZJE-hZ-EN5" secondAttribute="bottom" id="jKc-jo-hKZ"/>
                                             <constraint firstItem="ZJE-hZ-EN5" firstAttribute="top" secondItem="WdH-sS-Mso" secondAttribute="top" id="kFE-CP-Cy3"/>
                                             <constraint firstItem="ZJE-hZ-EN5" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" id="krq-aL-WP3"/>
