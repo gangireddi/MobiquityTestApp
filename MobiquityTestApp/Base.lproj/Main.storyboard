@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ku1-nv-uhU">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ku1-nv-uhU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -143,11 +144,11 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DU7-fK-IAj" id="eBJ-Ct-ayf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-7T-bzs">
-                                                    <rect key="frame" x="10" y="3" width="394" height="102"/>
+                                                    <rect key="frame" x="10" y="3" width="394" height="101.5"/>
                                                     <color key="backgroundColor" red="0.15071690082550049" green="0.34561371803283691" blue="0.43648651242256165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -177,7 +178,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHM-Rr-uJD">
-                                                    <rect key="frame" x="20" y="46" width="374" height="19.5"/>
+                                                    <rect key="frame" x="20" y="46" width="374" height="19"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -189,7 +190,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-eA-KUB">
-                                                    <rect key="frame" x="20" y="75.5" width="374" height="17.5"/>
+                                                    <rect key="frame" x="20" y="75" width="374" height="17.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17.5" id="HcB-cu-R7e"/>
                                                     </constraints>
@@ -259,19 +260,19 @@
                             <constraint firstItem="tLz-aB-VoI" firstAttribute="centerX" secondItem="tch-gZ-39o" secondAttribute="centerX" id="D1D-oe-RMw"/>
                             <constraint firstItem="i93-xn-yCz" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="Ezh-3q-j9l"/>
                             <constraint firstItem="tLz-aB-VoI" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" constant="10" id="GSX-Uz-2Gz"/>
+                            <constraint firstItem="LsR-3X-upa" firstAttribute="trailing" secondItem="Tsx-C8-iiY" secondAttribute="trailing" id="Lpi-FZ-JNi"/>
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="trailing" secondItem="LsR-3X-upa" secondAttribute="trailing" id="NcH-Q3-rLc"/>
                             <constraint firstAttribute="bottom" secondItem="i93-xn-yCz" secondAttribute="bottom" id="QWo-dj-tDd"/>
                             <constraint firstAttribute="bottom" secondItem="n7w-rO-UNR" secondAttribute="bottom" id="U4L-Be-lAc"/>
+                            <constraint firstItem="Tsx-C8-iiY" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="VF2-HN-9Jf"/>
                             <constraint firstItem="Tsx-C8-iiY" firstAttribute="top" secondItem="HIQ-Cu-wpA" secondAttribute="bottom" constant="10" id="WJO-SU-LF3"/>
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="top" secondItem="LsR-3X-upa" secondAttribute="top" id="cRx-2N-wh7"/>
                             <constraint firstItem="i93-xn-yCz" firstAttribute="top" secondItem="tch-gZ-39o" secondAttribute="top" id="eH1-Kc-wr1"/>
                             <constraint firstItem="tLz-aB-VoI" firstAttribute="centerY" secondItem="tch-gZ-39o" secondAttribute="centerY" id="hWk-sh-eL0"/>
-                            <constraint firstAttribute="trailing" secondItem="Tsx-C8-iiY" secondAttribute="trailing" id="jce-uG-Y8W"/>
                             <constraint firstItem="HIQ-Cu-wpA" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="ltT-CY-vbQ"/>
                             <constraint firstItem="LsR-3X-upa" firstAttribute="trailing" secondItem="n7w-rO-UNR" secondAttribute="trailing" id="m3e-pb-CuI"/>
                             <constraint firstItem="n7w-rO-UNR" firstAttribute="leading" secondItem="LsR-3X-upa" secondAttribute="leading" id="niQ-bS-Tz6"/>
                             <constraint firstItem="n7w-rO-UNR" firstAttribute="top" secondItem="Tsx-C8-iiY" secondAttribute="bottom" constant="10" id="wnu-Y3-hwm"/>
-                            <constraint firstItem="Tsx-C8-iiY" firstAttribute="leading" secondItem="tch-gZ-39o" secondAttribute="leading" id="xtw-rS-dDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LsR-3X-upa"/>
                     </view>
@@ -338,21 +339,21 @@
                                 <rect key="frame" x="10" y="124" width="394" height="772"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="COA-KZ-b6D">
-                                    <size key="itemSize" width="396.5" height="130"/>
+                                    <size key="itemSize" width="394.5" height="195"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherForcastCell" id="WdH-sS-Mso" customClass="WeatherForcastCell" customModule="MobiquityTestApp" customModuleProvider="target">
-                                        <rect key="frame" x="-1.5" y="0.0" width="396.5" height="130"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="394.5" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="396.5" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394.5" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-hZ-EN5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="396.5" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="394.5" height="195"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -361,10 +362,10 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Temparature Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-N1-pC5">
-                                                    <rect key="frame" x="20" y="10" width="366.5" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Temparature Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-N1-pC5">
+                                                    <rect key="frame" x="20" y="10" width="364.5" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="egm-Yf-FXA"/>
+                                                        <constraint firstAttribute="height" constant="40" id="egm-Yf-FXA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.033778809010000001" green="0.54098916050000001" blue="0.60638666149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -373,11 +374,11 @@
                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Wind Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-qm-GHb">
-                                                    <rect key="frame" x="20" y="40" width="386.5" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Wind Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-qm-GHb">
+                                                    <rect key="frame" x="20" y="55" width="384.5" height="40"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.96575695279999996" green="0.46990579370000002" blue="0.092313684519999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -385,11 +386,11 @@
                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Humidity Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-Sh-RaR">
-                                                    <rect key="frame" x="20" y="70" width="386.5" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Humidity Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTW-Sh-RaR">
+                                                    <rect key="frame" x="20" y="100" width="384.5" height="40"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0039215686269999999" green="0.72549019609999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -397,11 +398,11 @@
                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5q-QH-Hye">
-                                                    <rect key="frame" x="20" y="100" width="386.5" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5q-QH-Hye">
+                                                    <rect key="frame" x="20" y="145" width="384.5" height="40"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.2439174107" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -409,26 +410,26 @@
                                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hup-o1-7V0">
-                                                    <rect key="frame" x="5" y="116" width="386.5" height="14"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hup-o1-7V0">
+                                                    <rect key="frame" x="5" y="181" width="384.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="12"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.1647058824" green="0.20784313730000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="n5q-QH-Hye" firstAttribute="top" secondItem="CTW-Sh-RaR" secondAttribute="bottom" constant="10" id="2vY-Z0-J0a"/>
+                                            <constraint firstItem="n5q-QH-Hye" firstAttribute="top" secondItem="CTW-Sh-RaR" secondAttribute="bottom" constant="5" id="2vY-Z0-J0a"/>
                                             <constraint firstItem="H3z-N1-pC5" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" constant="20" id="3GD-fe-2kk"/>
                                             <constraint firstItem="CTW-Sh-RaR" firstAttribute="height" secondItem="GRg-qm-GHb" secondAttribute="height" id="4uz-pP-1Jo"/>
                                             <constraint firstItem="CTW-Sh-RaR" firstAttribute="trailing" secondItem="GRg-qm-GHb" secondAttribute="trailing" id="AY3-XN-qY5"/>
@@ -439,20 +440,20 @@
                                             <constraint firstItem="Hup-o1-7V0" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" constant="5" id="Zb0-qJ-DBr"/>
                                             <constraint firstItem="n5q-QH-Hye" firstAttribute="trailing" secondItem="CTW-Sh-RaR" secondAttribute="trailing" id="ary-hr-0nX"/>
                                             <constraint firstItem="GRg-qm-GHb" firstAttribute="height" secondItem="H3z-N1-pC5" secondAttribute="height" id="eji-wk-Vdv"/>
-                                            <constraint firstItem="GRg-qm-GHb" firstAttribute="top" secondItem="H3z-N1-pC5" secondAttribute="bottom" constant="10" id="hTq-qO-T0d"/>
+                                            <constraint firstItem="GRg-qm-GHb" firstAttribute="top" secondItem="H3z-N1-pC5" secondAttribute="bottom" constant="5" id="hTq-qO-T0d"/>
                                             <constraint firstItem="GRg-qm-GHb" firstAttribute="trailing" secondItem="H3z-N1-pC5" secondAttribute="trailing" constant="20" id="iuB-8X-T95"/>
                                             <constraint firstAttribute="bottom" secondItem="ZJE-hZ-EN5" secondAttribute="bottom" id="jKc-jo-hKZ"/>
                                             <constraint firstItem="ZJE-hZ-EN5" firstAttribute="top" secondItem="WdH-sS-Mso" secondAttribute="top" id="kFE-CP-Cy3"/>
                                             <constraint firstItem="ZJE-hZ-EN5" firstAttribute="leading" secondItem="WdH-sS-Mso" secondAttribute="leading" id="krq-aL-WP3"/>
                                             <constraint firstAttribute="trailing" secondItem="Hup-o1-7V0" secondAttribute="trailing" constant="5" id="n3K-dz-MTf"/>
                                             <constraint firstItem="H3z-N1-pC5" firstAttribute="top" secondItem="WdH-sS-Mso" secondAttribute="top" constant="10" id="oOh-ME-NoH"/>
-                                            <constraint firstItem="CTW-Sh-RaR" firstAttribute="top" secondItem="GRg-qm-GHb" secondAttribute="bottom" constant="10" id="rU9-yH-SSD"/>
+                                            <constraint firstItem="CTW-Sh-RaR" firstAttribute="top" secondItem="GRg-qm-GHb" secondAttribute="bottom" constant="5" id="rU9-yH-SSD"/>
                                             <constraint firstItem="CTW-Sh-RaR" firstAttribute="leading" secondItem="GRg-qm-GHb" secondAttribute="leading" id="sPW-dl-q6F"/>
                                             <constraint firstAttribute="bottom" secondItem="Hup-o1-7V0" secondAttribute="bottom" id="sSf-ua-lRX"/>
                                             <constraint firstItem="n5q-QH-Hye" firstAttribute="leading" secondItem="CTW-Sh-RaR" secondAttribute="leading" id="uB5-Or-wXv"/>
                                             <constraint firstAttribute="bottom" secondItem="n5q-QH-Hye" secondAttribute="bottom" constant="10" id="xiG-ig-7ST"/>
                                         </constraints>
-                                        <size key="customSize" width="396.5" height="130"/>
+                                        <size key="customSize" width="394.5" height="195"/>
                                         <connections>
                                             <outlet property="dateTimeInfoLabel" destination="Hup-o1-7V0" id="iOo-co-DxE"/>
                                             <outlet property="humidityInfoLabel" destination="CTW-Sh-RaR" id="9V2-wP-YgW"/>

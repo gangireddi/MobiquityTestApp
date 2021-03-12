@@ -32,8 +32,10 @@ class CityScreenVC: BaseViewController {
         openloader()
         Service.shared.fetchData(lat: selectedLocation?.latitude ?? "", lon: selectedLocation?.longitude ?? "", units: appDelegate.selectedUnits) { (responseDataObject, error) in
             self.responseDataObject = responseDataObject
-            self.collectionVw.reloadData()
-            self.closeLoader()
+            DispatchQueue.main.async {
+                self.collectionVw.reloadData()
+                self.closeLoader()
+            }
         }
     }
     
@@ -110,12 +112,12 @@ extension CityScreenVC: UICollectionViewDataSource,UICollectionViewDelegate,UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let wt = self.view.frame.width - 30
-        return CGSize(width: wt, height: 130.0)
+        let wt = self.collectionVw.frame.width/2.0 - 5.0
+        return CGSize(width: wt, height: 195.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5.0, left: 5, bottom: 5.0, right: 5)
+        return UIEdgeInsets(top: 2.0, left: 0, bottom: 2.0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -123,7 +125,7 @@ extension CityScreenVC: UICollectionViewDataSource,UICollectionViewDelegate,UICo
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
+        return 3.0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
